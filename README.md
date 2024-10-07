@@ -19,6 +19,8 @@ One way to detect the potential overuse of LLMs for text paraphrasing and genera
 
 Such a list of indicator words may serve as a red flag. However, we need to warn that it is not a silver bullet and, according to our analysis of Kobak's dataset, it is extremely domain-specific (in current version PubMed-specific). Therefore, it is highly possible that the tool may produce a false positive result, as Kobak et al. indicated that commonly used words in academic literature, such as "these," "research," "findings," etc., are included.
 
+<img src="man/figures/app-screenshot.png" height="50%" style="display: block; margin: auto;" />
+
 ### Call to action
 Since there is evidence that such lists of indicator words are domain- and LLM-specific, we invite you to get in touch and create a similar study for the Earth Science domain.
 
