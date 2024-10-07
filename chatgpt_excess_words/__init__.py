@@ -61,6 +61,7 @@ def readme_to_html():
             line
             for line in readme_file.readlines()[1:]
             if not line.lstrip().startswith("<img")
+            if not line.lstrip().startswith("[![Streamlit App]")
         ]
 
         # Join the filtered lines into a single string
