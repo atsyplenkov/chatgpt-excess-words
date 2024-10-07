@@ -1,0 +1,72 @@
+import pandas as pd
+import docx2txt
+from PyPDF2 import PdfReader
+import markdown as md
+
+
+def extract_text_from_file(uploaded_file):
+    # Get file extension
+    file_extension = uploaded_file.name.split(".")[-1]
+
+    if file_extension == "txt":
+        # Read text file directly
+        text = uploaded_file.read().decode("utf-8")
+    elif file_extension == "docx":
+        # Extract text from docx
+        text = docx2txt.process(uploaded_file)
+    elif file_extension == "pdf":
+        # Extract text from pdf
+        pdf_reader = PdfReader(uploaded_file)
+        text = ""
+        for page in pdf_reader.pages:
+            text += page.extract_text()
+    else:
+        st.error("Invalid file format. Please upload a .txt, .docx, or .pdf file.")
+        return None
+
+    return text.lower()
+
+
+def load_keywords():
+    # Read Kobak's et al. (2024) findings
+    url = "https://raw.githubusercontent.com/berenslab/chatgpt-excess-words/main/results/excess_words.csv"
+    df = pd.read_csv(url)
+    keywords = df.iloc[:, 0].tolist()
+    # Add "Utilise", "Utilize", etc.
+    additional_keywords = [
+        "utilise",
+        "utilize",
+        "utilising",
+        "utilizing",
+        "utilised",
+        "utilized",
+        "utilizes",
+        "utilises",
+    ]
+    keywords.extend(additional_keywords)
+    # Lower keyword list
+    keywords = [keyword.lower() for keyword in keywords]
+
+    return keywords
+
+
+# Read the README.md file and skip the first line
+import markdown as md
+
+
+def readme_to_html():
+    with open("README.md", "r") as readme_file:
+        # Skip the first line and filter out lines that start with "<img"
+        readme_lines = [
+            line
+            for line in readme_file.readlines()[1:]
+            if not line.lstrip().startswith("<img")
+        ]
+
+        # Join the filtered lines into a single string
+        readme_content = "".join(readme_lines)
+
+    # Convert markdown to HTML
+    readme_html = md.markdown(readme_content)
+
+    return readme_html
