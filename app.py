@@ -126,7 +126,7 @@ if text:
 github_link = """
     <div style="text-align: center; margin-top: 20px;">
         <p>Source code on 
-        <a href="https://github.com/atsyplenkov/chatgpt-excess-words" target="_blank">
+        <a href="https://github.com/atsyplenkov/detect-chatgpt" target="_blank">
         <i class="fa fa-github" style="font-size:18px;"></i> GitHub</a></p>
     </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

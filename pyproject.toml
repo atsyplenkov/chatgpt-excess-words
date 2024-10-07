@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "chatgpt-excess-words"
+name = "detect-chatgpt"
 version = "0.1.1"
 description = "ChatGPT excess words checker based on the 14.4 million PubMed abstracts analysis by Kobak et al. (2024)."
 authors = ["atsyplenkov <atsyplenkov@fastmail.com>"]
