@@ -23,7 +23,7 @@ st.write(
     f"""
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <details>
-        <summary> <i class="fa-solid fa-circle-info"></i> About </summary>
+        <summary> <i class="fa-solid fa-circle-info"></i> About: </summary>
         {readme_to_html()}
     </details>
     """,
