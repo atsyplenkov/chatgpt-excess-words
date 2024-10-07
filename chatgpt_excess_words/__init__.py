@@ -43,10 +43,15 @@ def load_keywords():
         "utilized",
         "utilizes",
         "utilises",
+        "leverage"
     ]
+    # Remove common words
+    common_words = {
+        "https",
+        "github"
+    }
+    keywords = [keyword.lower() for keyword in keywords if keyword not in common_words]
     keywords.extend(additional_keywords)
-    # Lower keyword list
-    keywords = [keyword.lower() for keyword in keywords]
 
     return keywords
 

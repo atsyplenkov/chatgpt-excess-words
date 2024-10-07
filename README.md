@@ -1,7 +1,7 @@
 # ChatGPT Excess Words Checker
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://detect-chatgpt.streamlit.app)
-[![Version](https://img.shields.io/badge/version-0.1.0-green)](https://github.com/atsyplenkov/chatgpt-excess-words)
+[![Version](https://img.shields.io/badge/version-0.1.1-green)](https://github.com/atsyplenkov/chatgpt-excess-words)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 The use of Large Language Models (LLMs) in text generation has already deeply influenced our [lives](https://time.com/7026050/chatgpt-quit-teaching-ai-essay/) and, unfortunately, scientific literature. Recent findings by Kobak et al. ([2024](https://arxiv.org/abs/2406.07016v2)) suggested that approximately **10%** of all 2024 abstracts in the PubMed database were processed with LLMs, while Liang et al. ([2024](https://arxiv.org/abs/2403.07183)) found that up to **16.9%** of peer reviews of AI conference proceedings have been substantially modified by LLMs. Possibly, all this happens mostly with the help of ChatGPT, which occupies 76% of the global generative AI market (Van Rossum, [2024](https://www.flexos.work/learn/generative-ai-top-150)).

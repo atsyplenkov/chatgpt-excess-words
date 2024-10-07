@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "chatgpt-excess-words"
-version = "0.1.0"
+version = "0.1.1"
 description = "ChatGPT excess words checker based on the 14.4 million PubMed abstracts analysis by Kobak et al. (2024)."
 authors = ["atsyplenkov <atsyplenkov@fastmail.com>"]
 readme = "README.md"
@@ -13,6 +13,7 @@ streamlit = "^1.39.0"
 docx2txt = "^0.8"
 pypdf2 = "^3.0.1"
 markdown = "^3.7"
+altair = "^5.4.1"
 
 
 [build-system]
