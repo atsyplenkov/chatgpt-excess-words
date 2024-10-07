@@ -2,6 +2,7 @@ import pandas as pd
 import docx2txt
 from PyPDF2 import PdfReader
 import markdown as md
+import streamlit as st
 
 
 def extract_text_from_file(uploaded_file):

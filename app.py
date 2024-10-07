@@ -1,4 +1,4 @@
-import pandas as pd
+import re
 import streamlit as st
 from chatgpt_excess_words import *
 
@@ -14,7 +14,7 @@ st.write(
     <i class="ai ai-pubmed"></i> abstracts analysis by 
     *Kobak et al.* [(2024)](https://arxiv.org/html/2406.07016v2).
     """,
-    unsafe_allow_html=True,
+    unsafe_allow_html=True
 )
 
 ### Add README.md content
@@ -45,12 +45,15 @@ else:
     st.info("Please upload a file or enter text.")
     text = None  # Set text to None if no input is provided
 
+
 if text:
     keyword_counts = {}
 
     # Count the occurrences of each keyword in the text
     for keyword in keywords:
-        count = text.count(keyword.lower())  # Count occurrences of the keyword
+        # Create a regex pattern to match the keyword as a full word (case-insensitive)
+        pattern = r'\b' + re.escape(keyword) + r'\b'
+        count = len(re.findall(pattern, text, re.IGNORECASE))  # Count occurrences of the full keyword
         if count > 0:  # Only store keywords found in the text
             keyword_counts[keyword] = count
 
@@ -65,6 +68,7 @@ if text:
             st.error(f"{count} — {keyword}")
     else:
         st.success("**No keywords found in the text.**")
+
 
 ## Footer
 github_link = """
