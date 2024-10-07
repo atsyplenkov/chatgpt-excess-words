@@ -56,15 +56,16 @@ import markdown as md
 
 def readme_to_html():
     with open("README.md", "r") as readme_file:
-        # Skip the first line and filter out lines that start with "<img"
-        readme_lines = [
-            line
-            for line in readme_file.readlines()[1:]
-            if not line.lstrip().startswith("<img")
-            if not line.lstrip().startswith("[![Streamlit App]")
-        ]
+        readme_lines = []
+        for line in readme_file.readlines()[1:]:
+            if line.lstrip().startswith("### Acknowledgments"):
+                break
 
-        # Join the filtered lines into a single string
+            if not line.lstrip().startswith("<img") and not line.lstrip().startswith(
+                "[![Streamlit App]"
+            ):
+                readme_lines.append(line)
+
         readme_content = "".join(readme_lines)
 
     # Convert markdown to HTML

@@ -21,3 +21,6 @@ Such a list of indicator words may serve as a red flag. However, we need to warn
 
 ### Call to action
 Since there is evidence that such lists of indicator words are domain- and LLM-specific, we invite you to get in touch and create a similar study for the Earth Science domain.
+
+### Acknowledgments
+I would like to thank [@yorko](https://github.com/yorko) for the fruitful discussion and relevant links on previous research. Additional kudos to [@FareedKhan-dev](https://github.com/FareedKhan-dev) for publishing his [app](https://github.com/FareedKhan-dev/Detect-AI-text-Easily) as open source; it provided the momentum for creating this one.

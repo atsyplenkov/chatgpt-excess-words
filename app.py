@@ -9,11 +9,10 @@ keywords = load_keywords()
 st.title("ChatGPT Excess Words Checker")
 st.write(
     """
-    Upload a text file, Word document, PDF, or directly enter 
-    text to check for **excess words**.
-    Based on the 14.4 million PubMed <i class="ai ai-pubmed"></i>
-     abstracts analysis by *Kobak et al.* 
-    [(2024)](https://arxiv.org/html/2406.07016v2).
+    Checks the input text for **ChatGPT excess words**.
+    Based on the words indicated by 14.4 million PubMed
+    <i class="ai ai-pubmed"></i> abstracts analysis by 
+    *Kobak et al.* [(2024)](https://arxiv.org/html/2406.07016v2).
     """,
     unsafe_allow_html=True,
 )
@@ -32,7 +31,7 @@ st.write(
 
 ## Option 1: File Uploader
 uploaded_file = st.file_uploader(
-    "Choose a file (optional)", type=["txt", "docx", "pdf"]
+    "Upload a file (optional)", type=["txt", "docx", "pdf"]
 )
 
 ## Option 2: Text Input
@@ -57,7 +56,9 @@ if text:
 
     if keyword_counts:
         # Sort the dictionary by count in descending order
-        sorted_keywords = sorted(keyword_counts.items(), key=lambda item: item[1], reverse=True)
+        sorted_keywords = sorted(
+            keyword_counts.items(), key=lambda item: item[1], reverse=True
+        )
 
         st.write("**Found Keywords (sorted by count):**")
         for keyword, count in sorted_keywords:
