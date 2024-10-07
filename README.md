@@ -1,10 +1,13 @@
 # ChatGPT Excess Words Checker
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://detect-chatgpt.streamlit.app)
+[![Version](https://img.shields.io/badge/version-0.1.0-green)](https://github.com/atsyplenkov/chatgpt-excess-words)
+
 The use of Large Language Models (LLMs) in text generation has already deeply influenced our [lives](https://time.com/7026050/chatgpt-quit-teaching-ai-essay/) and, unfortunately, scientific literature. Recent findings by Kobak et al. ([2024](https://arxiv.org/abs/2406.07016v2)) suggested that approximately **10%** of all 2024 abstracts in the PubMed database were processed with LLMs, while Liang et al. ([2024](https://arxiv.org/abs/2403.07183)) found that up to **16.9%** of peer reviews of AI conference proceedings have been substantially modified by LLMs. Possibly, all this happens mostly with the help of ChatGPT, which occupies 76% of the global generative AI market (Van Rossum, [2024](https://www.flexos.work/learn/generative-ai-top-150)).
 
 From our perspective, when the publishable text has undergone something beyond spell-checking or minor writing updates with the help of LLM, the question that should be asked by every researcher, scientist, teacher, or anyone who cares about this topic is as follows. "Why should I bother reading something that nobody could be bothered to write?"
 
-<img src="man/figures/why-should-i-read.jpg" width="80%" style="display: block; margin: auto;" />
+<img src="man/figures/why-should-i-read.jpg" height="50%" style="display: block; margin: auto;" />
 
 ### How does it work?
 AI text detection is hard and not straightforward. Recent studies (e.g., Elkhatat et al., [2023](https://edintegrity.biomedcentral.com/articles/10.1007/s40979-023-00140-5)) and [Kaggle competitions](https://yorko.github.io/2022/detecting-generated-content/) show that without human manual review, it is currently nearly impossible to detect AI-generated text with confidence. While popular AI-detecting resources like GPTZero, zerogpt, and Copyleaks work like black-box models and offer blind reliance on their results, we suggest closely exploring the questionable bits of text.
